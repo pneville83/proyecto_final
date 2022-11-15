@@ -58,25 +58,24 @@ export default function LoginView () {
 
   return(
     <div>
-      <div>
-        <label>Correo Electrónico</label>
-        <input 
+      <div className="loginForm">
+        <input className="email"
           type='email' 
           id="email" 
-          placeholder="Tu correo electrónico"
+          placeholder="Correo electrónico"
           onChange={(e)=> setEmail(e.target.value)}
           > 
         </input>
-        <label>Contraseña</label>
-        <input 
+        <input className="password"
           type='password' 
           id='password'
+          placeholder="Contraseña"
           onChange={(e)=> setPassword(e.target.value)}
           >
         </input>
-        <button onClick={signUp}>Crer Cuenta</button>
-        <button onClick={signIn}>Acceder</button>
-        <button onClick={handleOnClick}>Login wiht Google</button>
+        <button className="singUpAcount" onClick={signUp}>Crer Cuenta</button>
+        <button className="singInAcount" onClick={signIn}>Acceder</button>
+        <button className="googleSingUpAcount" onClick={handleOnClick}>Login wiht Google</button>
       </div>
     </div>
   );
