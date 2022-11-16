@@ -83,7 +83,7 @@
 .logo{
   width: 250px;
   display: flex;
-  align-items: center;
+  align-items: center; 
 }
 
 .googleLogo{
