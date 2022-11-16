@@ -29,32 +29,29 @@ export default function LoginView () {
   }
 
   const auth1 = getAuth(app);
-
-  const [email, setEmail] = useState ('');
-  const [password, setPassword] = useState ('');
-
-  const signUp = () =>{
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  /* Sign in with email and password */
+  const signUp = () => {
     createUserWithEmailAndPassword(auth1, email, password)
-      .then((userCredential)=>{
+      .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user)
-        alert('Usuario creado satisfactoriamente')
+        console.log(user);
+        alert("Usuario creado satisfactoriamente");
       })
-      .catch((error)=>{
+      .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message
-        alert(errorMessage, errorCode)
+        const errorMessage = error.message;
+        alert(errorMessage, errorCode);
       });
+  };
 
-  }
-
-  const signIn = ()=> {
+  const signIn = () => {
     signInWithEmailAndPassword(auth1, email, password)
-      .then((userCredential)=>{
+      .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user)
-        alert('Login sastifactorio')
+        console.log(user);
+        alert("Login sastifactorio");
       })
       .catch((error)=>{
          const errorCode = error.code
