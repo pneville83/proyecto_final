@@ -50,7 +50,7 @@
 }
 
 
-/* Email Form */
+/* Email Form */ 
 
 .email{
   width: 250px;
@@ -90,4 +90,42 @@
   width: 25px;
   height: 25px;
   background-color: #fff;
+}
+
+.dashboardContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dashboardView{
+ display: flexbox;
+ flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.dashboardSider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: aliceblue;
+  height: 100vh;
+  width: 30vh;
+}
+
+.Trial{
+  width: 200px;
+  height: 200px;
+  background-color: #5643c1;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
 }
