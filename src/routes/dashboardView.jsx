@@ -1,10 +1,11 @@
-import dalletest1 from './assets/Dalle/dalletest1.png';
-import dalletest2 from './assets/Dalle/dalletest2.png';
-import dalletest3 from './assets/Dalle/dalletest3.png';
-import dalletest4 from './assets/Dalle/dalletest4.png';
-import dalletest5 from './assets/Dalle/dalletest5.png';
-import dalletest6 from './assets/Dalle/dalletest6.png';
-import dalletest7 from './assets/Dalle/dalletest7.png';
+import dalletest1 from '../assets/Dalle/dalletest1.png';
+import dalletest2 from '../assets/Dalle/dalletest2.png';
+import dalletest3 from '../assets/Dalle/dalletest3.png';
+import dalletest4 from '../assets/Dalle/dalletest4.png';
+import dalletest5 from '../assets/Dalle/dalletest5.png';
+import dalletest6 from '../assets/Dalle/dalletest6.png';
+import dalletest7 from '../assets/Dalle/dalletest7.png';
+
 
 /* this is a test to imagine the dashboard */
 
