@@ -11,24 +11,29 @@ export default function ChooseUsernameView () {
   const [currentUser, setCurrentUser] = useState({});
   const [username, setUsername] = useState('');
 
+  /* When the user is logged in navigate to the dashboard */
   function handleUserLoggedIn(user) {
     navigate('/dashboard');
   }
 
+  /* ?? */
   function handleUserNotRegistred(user) {
     setCurrentUser(user);
     setState(3);
   }
 
+  /* if user is not logged in, navigate to the login page */
   function handleUserNotLoggedIn() {
     navigate('/login')
   }
 
+  /* Allow the user to choose a username */
   function handleInputUsername(e) {
     setUsername(e.target.value);
 
   }
 
+  /*Check if the username is available */
   async function handleContinue() {
     if (username !== '') {
       const exists = await existsUsername(username);
@@ -45,7 +50,7 @@ export default function ChooseUsernameView () {
     }
 
   } 
-
+ /* Render the choose username page to select a username*/
   if (state === 3 || state === 5) {
     return (
       <div>
@@ -64,7 +69,7 @@ export default function ChooseUsernameView () {
       </div>
     );
   }
-
+  /* if state === 6, display the success message and navigate to the dashboard*/
   if (state === 6) {
     return (
       <div>

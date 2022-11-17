@@ -91,3 +91,129 @@
   height: 25px;
   background-color: #fff;
 }
+
+
+
+/* Botones de Prueba */
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 1rem;
+  color:#fff;
+  font-family: roboto, sans-serif;
+  font-size: larger;
+}
+
+a {
+  color: #fff; 
+}
+
+a:hover{
+  color: #888;
+}
+
+button{
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #5643c1;
+  height: 40px;
+  font-size: medium;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input{
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  height: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.counter{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.App-logo{
+  display: flex;
+  flex-wrap: wrap;
+gap: 1rem;
+border-radius: 0.5rem;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.imagenes{
+  width: 50px;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagenes img{
+  width: 100px;
+  height: 100px;
+  border-radius: 25%;
+  margin: 0.5rem;
+}
+
+/* Dashboard */
+
+.dashboardContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 1rem;
+}
+
+.dashboardSider{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 40vh;
+  height: 100vh;
+  background-color: #5643c1;
+  padding: 50px;
+}
+
+.dashboardSider h1{
+  background-color: none;
+}
+
+.dashboardView {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+border-radius: 0.5rem;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboardView img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: aquamarine;
+}
