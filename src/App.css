@@ -3,7 +3,11 @@
   font-family: roboto, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #8902a8;
+  background-image: url("./assets/background_larnu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .loginForm {
@@ -217,3 +221,12 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   background-color: aquamarine;
 }
+
+.vote{
+  width: 100px;
+  height: 100px;
+  border-radius: 25%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
