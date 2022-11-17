@@ -16,7 +16,7 @@ export default function dashboard() {
         <h1>LarnU</h1>
         <h2>Dashboard</h2>
         <h2>Push</h2>
-      </div>
+      </div> 
       <div className="dashboardView">
         <img src={dalletest1} alt="dalletest1" />
         <img src={dalletest2} alt="dalletest2" />
