@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   font-family: roboto, sans-serif;
   margin: 0;
@@ -39,7 +39,8 @@
   background-color: #fff;
 }
 
-.singInAcount,.singUpAcount {
+.singInAcount,
+.singUpAcount {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +57,7 @@
 
 /* Email Form */
 
-.email{
+.email {
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -70,7 +71,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.password{
+.password {
   width: 250px;
   display: flex;
   flex-direction: column;
@@ -84,13 +85,13 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo{
+.logo {
   width: 250px;
   display: flex;
   align-items: center;
 }
 
-.googleLogo{
+.googleLogo {
   width: 25px;
   height: 25px;
   background-color: #fff;
@@ -99,27 +100,27 @@
 
 
 /* Botones de Prueba */
-.App{
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   gap: 1rem;
-  color:#fff;
+  color: #fff;
   font-family: roboto, sans-serif;
   font-size: larger;
 }
 
 a {
-  color: #fff; 
+  color: #fff;
 }
 
-a:hover{
+a:hover {
   color: #888;
 }
 
-button{
+button {
   width: 150px;
   display: flex;
   align-items: center;
@@ -134,7 +135,7 @@ button{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input{
+input {
   width: 250px;
   display: flex;
   align-items: center;
@@ -147,7 +148,7 @@ input{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.counter{
+.counter {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -156,23 +157,23 @@ input{
 }
 
 
-.App-logo{
+.App-logo {
   display: flex;
   flex-wrap: wrap;
-gap: 1rem;
-border-radius: 0.5rem;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  gap: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 }
 
-.imagenes{
+.imagenes {
   width: 50px;
- display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.imagenes img{
+.imagenes img {
   width: 100px;
   height: 100px;
   border-radius: 25%;
@@ -181,7 +182,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 /* Dashboard */
 
-.dashboardContainer{
+.dashboardContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,28 +190,24 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   gap: 1rem;
 }
 
-.dashboardSider{
+.dashboardSider {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   width: 40vh;
   height: 100vh;
-  background-color: #5643c1;
   padding: 50px;
+  background-image: url("./assets/1.jpg");
 }
 
-.dashboardSider h1{
-  background-color: none;
-}
 
 .dashboardView {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
-border-radius: 0.5rem;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .dashboardView img {
@@ -219,14 +216,42 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5%;
   margin: 0.5rem;
   padding: 0.5rem;
-  background-color: aquamarine;
+
 }
 
-.vote{
+
+/* Dashboard */
+
+.logo_dashboard {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+  background-image: url("./assets/1.jpg");
+}
+
+.dashboardLogOutContainer {
+  display: flex;
+  margin-block: 100px;
+  align-items: center;
+  justify-content: center;
+  background-image: url("./assets/1.jpg");
+}
+
+.dashboardSider h2{
+  background-image: url("./assets/1.jpg");
+}
+
+.dashboardSiderLogo{
+  background-image: url("./assets/1.jpg");
+}
+
+/* Vote */
+.vote {
   width: 100px;
   height: 100px;
   border-radius: 25%;
   margin: 0.5rem;
   padding: 0.5rem;
 }
-
