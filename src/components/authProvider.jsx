@@ -1,10 +1,11 @@
-import {  onAuthStateChanged   } from "firebase/auth";
-import {  auth, getUserInfo, registerNewUser, userExist } from "../firebase/firebase";
+import {  getAuth, onAuthStateChanged   } from "firebase/auth";
+import {  app, auth, getUserInfo, registerNewUser, userExist } from "../firebase/firebase";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function AuthProvider ({children, onUserLoggedIn, onUserNotLoggedIn, onUserNotRegistred}) {
   const navigate = useNavigate();
+  const auth1= getAuth(app);
 
   useEffect (()=>{
     onAuthStateChanged(auth, async (user)=>{
@@ -20,7 +21,7 @@ export default function AuthProvider ({children, onUserLoggedIn, onUserNotLogged
         } else {
           await registerNewUser({
             uid: user.uid,
-            displayName: user.displayName || user.dispplayEmail,
+            displayName: user.displayName || user.email,
             username: '',
             processCompleted: false,
           });
@@ -30,6 +31,6 @@ export default function AuthProvider ({children, onUserLoggedIn, onUserNotLogged
         onUserNotLoggedIn();
       }
     });
-  }, [navigate, onUserLoggedIn, onUserNotRegistred, onUserNotLoggedIn]);
+  }, [navigate, onUserLoggedIn, onUserNotRegistred, onUserNotLoggedIn, auth1]);
   return <div>{children}</div>
 }

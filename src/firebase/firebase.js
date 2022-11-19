@@ -65,4 +65,8 @@ export async function getUserInfo (uid) {
   } catch (error) {}
 }
 
+export async function logout() {
+  await auth.signOut();
+}
+
 

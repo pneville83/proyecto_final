@@ -56,8 +56,9 @@ export default function LoginView() {
     signInWithEmailAndPassword(auth1, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        console.log(user)
         alert("Login sastifactorio");
+        
       })
       .catch((error) => {
         const errorCode = error.code;
