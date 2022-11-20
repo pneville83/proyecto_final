@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 export default function DashboardWrapper ({children}) {
 
   return (
-    <div>
+    <div  className="signOut">
       <nav>
-      {/* cargar un logotipo de larnu */}
-        <div>Logotipo</div>
-        <Link to="/signout">SignOut</Link>
+        <Link  to="/signout"><h2> Sign Out </h2></Link>
       </nav>
       <div>{children}</div>
     </div>

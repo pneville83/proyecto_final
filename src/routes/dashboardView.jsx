@@ -1,66 +1,75 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import dalletest1 from '../assets/Dalle/dalletest1.png';
-import dalletest2 from '../assets/Dalle/dalletest2.png';
-import dalletest3 from '../assets/Dalle/dalletest3.png';
-import dalletest4 from '../assets/Dalle/dalletest4.png';
-import dalletest5 from '../assets/Dalle/dalletest5.png';
-import dalletest6 from '../assets/Dalle/dalletest6.png';
-import dalletest7 from '../assets/Dalle/dalletest7.png';
-import AuthProvider from '../components/authProvider';
-import DashboardWrapper from '../components/dashboardWrapper';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import logo from "../assets/logo.svg";
+import AuthProvider from "../components/authProvider";
+import DashboardWrapper from "../components/dashboardWrapper";
+import PushView from "./pushView";
+import dashLogo from "../assets/dashboard.png";
+import pushLogo from "../assets/paper-plane.png";
 
-
-/* this is a test to imagine the dashboard */
 
 export default function Dashboard() {
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState({});
   const [state, setState] = useState(0);
 
-  function handleUserLoggedIn (user){
+  function handleUserLoggedIn(user) {
     setCurrentUser(user);
     setState(2);
   }
 
-  function handleUserNotRegistred (user){
-    navigate('/login');
+  function handleUserNotRegistred(user) {
+    navigate("/login");
   }
 
-  function handleUserNotLoggedIn(){
-    navigate('/login')
-
+  function handleUserNotLoggedIn() {
+    navigate("/login");
   }
 
-  if(state === 0) {
+  if (state === 0) {
     return (
       <AuthProvider
         onUserLoggedIn={handleUserLoggedIn}
         onUserNotLoggedIn={handleUserNotLoggedIn}
         onUserNotRegistred={handleUserNotRegistred}
       >
-        Loading...
+        <div className="loading">Loading...</div>
       </AuthProvider>
     );
   }
 
+  function handleOnClick() {
+    navigate("/pushview");
+  }
+
+  function handleOnClick2() {
+    navigate("/dashboard");
+  }
+
+
 
   return (
     <div className="dashboardContainer">
-      <DashboardWrapper></DashboardWrapper>
       <div className="dashboardSider">
-        <h1>LarnU</h1>
-        <h2>Dashboard</h2> 
-        <h2>Push</h2>
-      </div> 
+      <img className="logo" src={logo} alt="logo"></img>
+      <div className="dashboardSiderNav">
+        <div className="dashboardSiderButtons1">
+        <a className="dashboardSiderItem" onClick={handleOnClick2}><img className="dashLogo" src={dashLogo} alt="dashLogo"/>Dashboard</a>
+        </div>
+        <div className="dashboardSiderButtons2">
+        <a className="dashboardSiderItem" onClick={handleOnClick}><img className="pushLogo" src={pushLogo} alt="pushLogo"/>Push</a>
+        </div>
+      </div>
+        <DashboardWrapper />
+      </div>
       <div className="dashboardView">
-        <img src={dalletest1} alt="dalletest1" />
-        <img src={dalletest2} alt="dalletest2" />
-        <img src={dalletest3} alt="dalletest3" />
-        <img src={dalletest4} alt="dalletest4" />
-        <img src={dalletest5} alt="dalletest5" />
-        <img src={dalletest6} alt="dalletest6" />
-        <img src={dalletest7} alt="dalletest7" />
+        <iframe
+          className="iframe"
+          src="https://datastudio.google.com/embed/reporting/201e21d7-2005-44cb-8d09-e6b0827521db/page/1M"
+          title="iframeGoogle"
+        >
+          <p>Your browser does not support iframes.</p>
+        </iframe>
       </div>
     </div>
   );

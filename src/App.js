@@ -27,6 +27,10 @@ function App() {
     navigate('/login');
   };
 
+  const dashboard = () => {
+    navigate('/dashboard');
+  };
+
   /*
          <button onClick={() => setCounter(counter + 1)}>Incrementar</button>
          <button onClick={() => setCounter(counter - 1)}>Decrementar</button>
@@ -43,6 +47,7 @@ function App() {
 
       <div className='counter'>
         <button onClick={() => login()}>Ir al Login</button>
+        <button onClick={() => dashboard()}>Ir al Dashboard</button>
       </div>
       <div className='App-logo'>
         <div className='imagenes'>
