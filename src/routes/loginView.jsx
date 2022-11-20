@@ -1,10 +1,4 @@
-import {
-  GoogleAuthProvider,
-  signInWithPopup,
-  createUserWithEmailAndPassword,
-  getAuth,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
+import {GoogleAuthProvider,signInWithPopup,createUserWithEmailAndPassword,getAuth,signInWithEmailAndPassword,} from "firebase/auth";
 import { app, auth } from "../firebase/firebase";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +6,7 @@ import AuthProvider from "../components/authProvider";
 import logo from "../assets/logo.svg";
 import Google from "../assets/Google.png";
 
+/* Component to display the login page */
 export default function LoginView() {
   /* Set up state and assign navigate function */
   const [state, setCurrentState] = useState(0);

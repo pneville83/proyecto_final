@@ -3,9 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import AuthProvider from "../components/authProvider";
 import { existsUsername, updateUser } from "../firebase/firebase";
 
-
+/* Component to choose a username */
 export default function ChooseUsernameView () {
-
   const navigate = useNavigate();
   const [state, setState] = useState(0);
   const [currentUser, setCurrentUser] = useState({});
@@ -16,7 +15,7 @@ export default function ChooseUsernameView () {
     navigate('/dashboard');
   }
 
-  /* ?? */
+  /* Logeado without register */
   function handleUserNotRegistred(user) {
     setCurrentUser(user);
     setState(3);
@@ -30,7 +29,6 @@ export default function ChooseUsernameView () {
   /* Allow the user to choose a username */
   function handleInputUsername(e) {
     setUsername(e.target.value);
-
   }
 
   /*Check if the username is available */
@@ -46,10 +44,9 @@ export default function ChooseUsernameView () {
         await updateUser(tmp);
         setState(6);
       }
-
     }
-
   } 
+  
  /* Render the choose username page to select a username*/
   if (state === 3 || state === 5) {
     return (
@@ -69,6 +66,7 @@ export default function ChooseUsernameView () {
       </div>
     );
   }
+
   /* if state === 6, display the success message and navigate to the dashboard*/
   if (state === 6) {
     return (
@@ -78,8 +76,6 @@ export default function ChooseUsernameView () {
       </div>
     );
   }
-
-
   return (
     <AuthProvider
       onUserLoggedIn={handleUserLoggedIn}

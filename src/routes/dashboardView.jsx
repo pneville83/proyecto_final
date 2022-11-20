@@ -7,21 +7,24 @@ import PushView from "./pushView";
 import dashLogo from "../assets/dashboard.png";
 import pushLogo from "../assets/paper-plane.png";
 
-
+/* Component to display the dashboard page */
 export default function Dashboard() {
   const navigate = useNavigate();
   const [currentUser, setCurrentUser] = useState({});
   const [state, setState] = useState(0);
 
+  /* When the user is logged in navigate to the dashboard */
   function handleUserLoggedIn(user) {
     setCurrentUser(user);
     setState(2);
   }
 
+  /* Logeado without register */
   function handleUserNotRegistred(user) {
     navigate("/login");
   }
 
+  /* if user is not logged in, navigate to the login page */
   function handleUserNotLoggedIn() {
     navigate("/login");
   }
@@ -31,22 +34,21 @@ export default function Dashboard() {
       <AuthProvider
         onUserLoggedIn={handleUserLoggedIn}
         onUserNotLoggedIn={handleUserNotLoggedIn}
-        onUserNotRegistred={handleUserNotRegistred}
-      >
+        onUserNotRegistred={handleUserNotRegistred}>
         <div className="loading">Loading...</div>
       </AuthProvider>
     );
   }
 
+/* This function allow to change to Push View */
+/*Note: This function is not used in this version of the app*/  
   function handleOnClick() {
-    navigate("/pushview");
+    navigate("/pushView");
   }
-
+/* This function allow to change to the dashboard */
   function handleOnClick2() {
     navigate("/dashboard");
   }
-
-
 
   return (
     <div className="dashboardContainer">
