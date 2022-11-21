@@ -47,7 +47,7 @@ export default function Dashboard() {
   }
 /* This function allow to change to the dashboard */
   function handleOnClick2() {
-    navigate("/dashboard");
+    navigate("/");
   }
 
   return (
@@ -56,7 +56,7 @@ export default function Dashboard() {
       <img className="logo" src={logo} alt="logo"></img>
       <div className="dashboardSiderNav">
         <div className="dashboardSiderButtons1">
-        <a className="dashboardSiderItem" onClick={handleOnClick2}><img className="dashLogo" src={dashLogo} alt="dashLogo"/>Dashboard</a>
+        <a className="dashboardSiderItem" onClick={handleOnClick2}><img className="dashLogo" src={dashLogo} alt="dashLogo"/>Home</a>
         </div>
         <div className="dashboardSiderButtons2">
         <a className="dashboardSiderItem" onClick={handleOnClick}><img className="pushLogo" src={pushLogo} alt="pushLogo"/>Push</a>

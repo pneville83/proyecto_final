@@ -5,12 +5,15 @@ import { logout } from "../firebase/firebase";
 /* Component to sing out the user */
 export default function SignOutView () {
   const navigate = useNavigate();
+
   
 
   /* Function to sign out the user and navigate to the login page */
   async function handleUserLoggedIn (user){
     await logout();
     navigate ('/');
+    localStorage.removeItem('token');
+    window.location.reload(false);
   }
 
   /* If the user is not registered in, navigate to the login page */

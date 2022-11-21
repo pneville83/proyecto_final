@@ -90,6 +90,7 @@ export async function getUserInfo(uid) {
 /* Function that allows to logout the user */
 export async function logout() {
   await auth.signOut();
+  
 }
 
 
