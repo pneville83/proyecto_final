@@ -7,6 +7,7 @@ import DashboardView from './routes/dashboardView';
 import SignOutView from './routes/signOutView';
 import ChooseUsernameView from './routes/chooseUsernameView';
 import './index.css'
+import PushView from './routes/pushView';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
       <Route path='Dashboard' element={<DashboardView/>} />
       <Route path='Signout' element={<SignOutView/>} />
       <Route path='choose-username' element={<ChooseUsernameView/>} />
+      <Route path='push-view' element={<PushView/>} />
     </Routes>
   </BrowserRouter>
 );

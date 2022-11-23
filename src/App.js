@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { useNavigate } from 'react-router-dom';
 import dalletest1 from './assets/Dalle/dalletest1.png';
@@ -8,9 +8,19 @@ import dalletest4 from './assets/Dalle/dalletest4.png';
 import dalletest5 from './assets/Dalle/dalletest5.png';
 import dalletest6 from './assets/Dalle/dalletest6.png';
 import dalletest7 from './assets/Dalle/dalletest7.png';
+import ReactGa from 'react-ga';
+
+
+const TRACKING_ID= "UA-249469540-2";
+ReactGa.initialize(TRACKING_ID)
 
 
 function App() {
+
+  useEffect (()=>{
+    ReactGa.pageview(window.location.pathname)
+  }, []);
+
   const [counter1, setCounter1] = useState(0);
   const [counter2, setCounter2] = useState(0);
   const [counter3, setCounter3] = useState(0);
@@ -24,10 +34,12 @@ function App() {
 
   //create a route to navigate to to the next page
   const login = () => {
+    ReactGa.event({'category': 'click login', 'action': 'click', 'label': 'label'});
     navigate('/login');
   };
 
   const dashboard = () => {
+    ReactGa.event({'category': 'click dashboard', 'action': 'click', 'label': 'label'});
     navigate('/dashboard');
   };
 

@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AuthProvider from "../components/authProvider";
 import { existsUsername, updateUser } from "../firebase/firebase";
+import ReactGa from 'react-ga';
 
 /* Component to choose a username */
 export default function ChooseUsernameView () {
+
+  useEffect (()=>{
+    ReactGa.pageview(window.location.pathname)
+  }, []);
+  
   const navigate = useNavigate();
   const [state, setState] = useState(0);
   const [currentUser, setCurrentUser] = useState({});

@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
+import ReactGa from 'react-ga';
 
 
 /* Component to sing out the user */
 export default function DashboardWrapper ({children}) {
+  ReactGa.event({'category': 'click signOut', 'action': 'click', 'label': 'label'});
   return (
     <div  className="signOut">
       <nav>
