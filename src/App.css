@@ -272,3 +272,8 @@ color: #888;
   outline-style: none;
   text-decoration: none;
 }
+
+.iframe {
+  width: 98%;
+  height: 95vh;
+} 
