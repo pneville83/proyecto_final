@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import AuthProvider from "../components/authProvider";
 import { existsUsername, updateUser } from "../firebase/firebase";
 import ReactGa from 'react-ga';
@@ -18,6 +18,11 @@ export default function ChooseUsernameView () {
 
   /* When the user is logged in navigate to the dashboard */
   function handleUserLoggedIn(user) {
+    navigate('/dashboard');
+  }
+
+  /*When user add a username navigate to dashboard*/
+  function success() {
     navigate('/dashboard');
   }
 
@@ -56,12 +61,12 @@ export default function ChooseUsernameView () {
  /* Render the choose username page to select a username*/
   if (state === 3 || state === 5) {
     return (
-      <div>
+      <div className="chooseUserName">
         <h1>Bienvenido {currentUser.displayName || currentUser.email} </h1>
         <p>Para Terminar el proceso elige un nombre de Usuario</p>
         {state === 5 ? <p>El nombre de usuario ya existe, escoge otro</p> : ''}
         <div>
-          <input type='text' onInput={handleInputUsername}>
+          <input className="choooseUserName_input" type='text' onInput={handleInputUsername}>
           </input>
         </div>
         <div>
@@ -76,9 +81,10 @@ export default function ChooseUsernameView () {
   /* if state === 6, display the success message and navigate to the dashboard*/
   if (state === 6) {
     return (
-      <div>
-        <h1>Felicitaciones ya puedes ir al Dashboard</h1>
-        <Link to='/dashboard'>Continuar</Link>
+      <div className="chooseUserName">
+        <h1>¡Bienvenido {currentUser.displayName || currentUser.email}!</h1>
+        <p>El proceso de registro ha finalizado con éxito</p>
+        <Navigate to="/dashboard" replace={true} />
       </div>
     );
   }

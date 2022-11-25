@@ -10,29 +10,29 @@
   background-attachment: fixed;
 }
 
-.loginForm {
+/* Display Flex , Flex Direction : Column , Justify Content ; Center , aling Item Center*/
+
+.loginForm,.buttons,.googleSingUpAcount,.singInAcount,
+.singUpAcount,.email,.password,.App,button,input,.imagenes,.dashboardSider,.loading,.chooseUserName{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+.loginForm {
+  flex-direction: column;
   height: 100vh;
   gap: 1rem;
 }
 
 .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   width: 250px;
 }
 
 .googleSingUpAcount {
-  display: flex;
   width: 40px;
   height: 40px;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   padding: 1rem;
   border-radius: 50px;
@@ -41,9 +41,6 @@
 
 .singInAcount,
 .singUpAcount {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -59,10 +56,7 @@
 
 .email {
   width: 250px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -73,10 +67,7 @@
 
 .password {
   width: 250px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
@@ -98,13 +89,9 @@
 }
 
 
-
 /* Botones de Prueba */
 .App {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   gap: 1rem;
   color: #fff;
@@ -122,9 +109,6 @@ a:hover {
 
 button {
   width: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -137,9 +121,6 @@ button {
 
 input {
   width: 250px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -168,9 +149,6 @@ input {
 
 .imagenes {
   width: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .imagenes img {
@@ -191,10 +169,7 @@ input {
 }
 
 .dashboardSider {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
   width: 45vh;
   height: 100vh;
@@ -222,9 +197,6 @@ input {
 }
 
 .loading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   gap: 1rem;
 }
@@ -277,3 +249,33 @@ color: #888;
   width: 98%;
   height: 95vh;
 } 
+
+.chooseUserName {
+  flex-direction: column;
+  height: 100vh;
+  gap: 1rem;
+}
+
+.chooseUserName h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.chooseUserName p {
+  font-size: 1rem;
+  color: #ff8;
+}
+.chooseUserName input {
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 250px;
+  height: 40px;
+}
+
+.chooseUserName button {
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  height: 40px;
+}
